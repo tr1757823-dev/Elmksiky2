@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,33 +7,33 @@
 }
 
 body {
-    background: #2a3a6b; /* اللون الكحلي اللي ورا */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    background: #293d6b;
 }
 
 .calculator {
-    background: #5b6db0; /* جسم الآلة */
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     width: 280px;
+    padding: 20px;
+    background: #596db3;
+    border-radius: 19px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.display {
+#display {
     width: 100%;
     height: 70px;
-    background: #d6e2f0; /* الشاشة البيضا */
-    border: none;
-    border-radius: 10px;
-    text-align: right;
-    font-size: 36px;
-    padding: 15px;
     margin-bottom: 20px;
-    color: #000;
+    border: none;
     outline: none;
+    border-radius: 10px;
+    background: #d6e3f0;
+    text-align: right;
+    padding: 10px;
+    font-size: 35px;
+    color: #000;
 }
 
 .buttons {
@@ -44,54 +45,40 @@ body {
 button {
     height: 58px;
     border: none;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 11px;
+    background: #798abd;
     color: white;
+    font-size: 20px;
     cursor: pointer;
-    background: #7582b8; /* لون ارقام 7 8 9 */
     transition: 0.2s;
 }
 
+button:hover {
+    filter: brightness(1.12);
+}
+
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.93);
 }
 
-/* الالوان الخاصة */
-#clear {
-    background: #e05a33; /* AC برتقالي محمر */
+.clear {
+    background: #ed572d;
 }
 
-#del {
-    background: #3a5bdb; /* DEL ازرق */
+.delete {
+    background: #365de5;
 }
 
-#mod, #div, #mult, #min, #plus {
-    background: #f19b24; /* % / * - + برتقالي */
+.operator {
+    background: #f9a01b;
 }
 
-#equal {
-    background: #6fcf4d; /* = اخضر */
+.equal {
+    background: #68d044;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+@media (max-width: 350px) {
+    .calculator {
+        width: 90%;
+    }
+}
